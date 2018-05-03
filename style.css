@@ -1,0 +1,480 @@
+* {
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(img/fon_body.jpg);
+    z-index: 1;
+}
+
+/*slider*/
+
+.zagolovok {
+    margin-top: 71px;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 850px;
+    height: 530px;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 850px; /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('img/prev.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 0 0 0 -84px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('img/next.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 0 -84px 0 0; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+
+/* menu*/
+
+#menu {
+    top:0;
+    height: 70px;
+    background-image: url(img/fon_nenu.jpg);
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 40px;
+    font-size: 25px;
+    border-bottom: 1.25px solid #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+    
+}
+
+.hr li {
+    margin-right: 20px;
+    text-align: left;
+}
+
+.hr li a {
+    color: #7dba14;
+    text-decoration: none;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    font-family: Helvetica, sans-serif;
+}
+
+.hr li a:hover {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    color: darkorange;
+}
+
+.item {
+    border-top: 4px solid red;
+}
+
+.item_1:hover {
+    -moz-padding-bottom: 11.25px;
+    padding-bottom: 11.25px;
+    border-bottom: 1.25px solid darkorange;
+} 
+
+/*memu_vypad*/
+
+#vypad {
+    display: none;
+    list-style-type: none;
+    background-color: #ffffff;
+    z-index: 2;
+    color: #000000;
+    border-radius: 0 10px 10px 10px;
+    text-align: right;
+    float: left;
+    top: 69px;
+    right: 20px;
+    font-size: 18px;
+    z-index: 1000;
+    width: 335px;
+    box-shadow: 4px 4px 4px grey;
+}
+
+#vypad::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-bottom: 10px solid #ffffff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: relative;
+    z-index: 2;
+    right: 0;
+    top: -10px;
+    float: left;
+
+}
+
+#vypad:target {
+    display: block;
+    position: absolute;
+    float: inherit;
+    text-decoration: none;
+}
+
+.hrestic {
+    position: relative;
+    float: right;
+    font-size: 35px;
+    font-family: Comic Sans MS, fantasy;
+    top: -15px;
+    right: -15px;
+}
+
+/*
+#item_2:hover #vypad {
+    display: block;
+    position: absolute;
+    float: inherit;
+    text-decoration: none;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+}
+*/
+
+footer {
+    background-color: black;
+    position: relative;
+	color: red;
+	text-align:center;
+	padding:30px 10px;
+	border-top:1.25px solid #355100;
+    z-index: 10;
+}
+
+.copyright {
+    color: green;
+    text-decoration: none;
+}
+
+/*nuz_panel*/
+
+.nuz_panel {
+    text-align: left;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.zag_blok {
+    font-family: Time New Roman;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+.soz_merezi {
+    background-color: aliceblue;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    right: 320px;
+}
+
+.comanda {
+    background-color: aliceblue;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-top: -400px;
+}
+
+.canal {
+    background-color: aliceblue;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-top: -400px;
+    left: 320px;
+}
+
+.foto_blok {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.kavabanga {
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.kavabanga:hover {
+    border: 2.5px solid red;
+    -webkit-filter: contrast(160%);
+	-webkit-transform: rotate(-360deg);
+	-moz-transform: rotate(-3760deg);
+	-o-transform: rotate(-370deg);
+	-ms-transform: rotate(-360deg);
+	transform: rotate(-360deg);
+}
+
+.kavabanga_pidpus {
+    margin-left: -155px;
+    font-family: Comic Sans MS, cursive;
+}
+
+.depo {
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+    cursor: pointer; 
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.depo:hover {
+    border: 2.5px solid red;
+    -webkit-filter: contrast(160%);
+	-webkit-transform: rotate(-360deg);
+	-moz-transform: rotate(-360deg);
+	-o-transform: rotate(-360deg);
+	-ms-transform: rotate(-360deg);
+	transform: rotate(-360deg);
+}
+
+.depo_pidpus {
+    margin-top: -203px;
+    font-family: Comic Sans MS, cursive;
+}
+
+.kolibri {
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.kolibri:hover {
+    border: 2.5px solid red;
+    -webkit-filter: contrast(160%);
+	-webkit-transform: rotate(-350deg);
+	-moz-transform: rotate(-350deg);
+	-o-transform: rotate(-350deg);
+	-ms-transform: rotate(-350deg);
+	transform: rotate(-350deg);
+}
+
+.kolibri_pidpus {
+    margin-right: -157px; 
+    margin-top: -90px;
+    font-family: Comic Sans MS, cursive;
+}
+
+
+.foto_canal {
+    width: 100%;
+    height: 65px;
+    margin-top: 10px;
+}
+
+.text_canal {
+    margin: 5px 10px 5px 10px;
+    font-size: 25px;
+}
+
+.canal_sulka { 
+    text-decoration: none;
+    color: firebrick;
+}
+
+.canal_sulka:hover {
+    border-bottom: 2px solid firebrick;
+}
+
+/*histoty*/
+.histori_blok_1 {
+    width: 88%;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.text_decor {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.zag_histopy {
+    color: #B1967C;
+	font-family: 'Kurale', serif;
+	font-size: 2.2em;
+	border-bottom: 2px solid red;
+    font-weight: lighter;
+}
+
+.pid_zogolovok {
+    margin-left: 5px;
+    color: brown;
+}
