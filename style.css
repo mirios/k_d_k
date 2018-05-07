@@ -183,7 +183,11 @@ label, a{ /*при наведении на стрелки или переклю�
     text-align: left;
 }
 
-.hr li a {
+a {
+    text-decoration: none;
+}
+
+.time_color {
     color: #7dba14;
     text-decoration: none;
     -moz-transition: all 1s ease-out;
@@ -192,7 +196,7 @@ label, a{ /*при наведении на стрелки или переклю�
     font-family: Helvetica, sans-serif;
 }
 
-.hr li a:hover {
+.time_color:hover {
     -webkit-transform: scale(2);
     -moz-transform: scale(2);
     -o-transform: scale(2);
@@ -204,7 +208,6 @@ label, a{ /*при наведении на стрелки или переклю�
 }
 
 .item_1:hover {
-    -moz-padding-bottom: 11.25px;
     padding-bottom: 11.25px;
     border-bottom: 1.25px solid darkorange;
 } 
@@ -309,7 +312,7 @@ footer {
     background-color: aliceblue;
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 450px;
     right: 320px;
 }
 
@@ -317,16 +320,16 @@ footer {
     background-color: aliceblue;
     position: relative;
     width: 300px;
-    height: 400px;
-    margin-top: -400px;
+    height: 450px;
+    margin-top: -450px;
 }
 
 .canal {
     background-color: aliceblue;
     position: relative;
     width: 300px;
-    height: 400px;
-    margin-top: -400px;
+    height: 450px;
+    margin-top: -450px;
     left: 320px;
 }
 
