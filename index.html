@@ -4,8 +4,28 @@
 <meta charset="utf-8">
 <title>Home</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
 </head>
-<body>  
+<body>
+<a href="#" class="scrollup">Наверх</a>
 <div>
     <ul id="menu" class="hr" align="center">
         <li class="item" style="display: inline;"><a href="index.html" style="color: #ffffff; font-family: Helvetica, sans-serif;">Головна</a></li>

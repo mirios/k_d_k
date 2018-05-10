@@ -1,10 +1,30 @@
 <!doctype html>
 <html>
 <head>
-<link href="style.css" rel="stylesheet" type="text/css">   
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
 <meta charset="utf-8">
 </head>
 <body>
+<a href="#" class="scrollup">Наверх</a>
 <div>
     <ul id="menu" class="hr" align="center">
         <li class="item_1" style="display: inline;"><a href="index.html"><span class="time_color">Головна</span></a></li>
@@ -12,13 +32,13 @@
         <li class="item_1" style="display: inline;"><a href="#vypad"><span class="time_color">Альбоми</span></a>
         <ul  id="vypad" align="right">
             <li><a href="#menu"><span class="hrestic">&times</span></a></li>
-            <li style="margin-top: 10px;"><a href="https://drive.google.com/open?id=19oNR42PZhZaJJ1ocHxSBraxml0eO6C1j" target="_blank">"Бесконечный Шум"(2013)</a></li>
-            <li><a href="https://drive.google.com/open?id=1SQ_T-v_TwYN5rsXOTxfhJSOQ5_xJCzZw" target="_blank">"Самовыдуманный Рай"(2014)</a></li>
-            <li><a href="https://drive.google.com/open?id=1nRfclx6d8jw1L0MLzyyOqX0hJM2OZNr0" target="_blank">"KDKin"(2015)</a></li>
-            <li><a href="https://drive.google.com/open?id=1zJTpZdEd60zrymQsEW_ggAe7Xm4_uTDl" target="_blank">"18+"(2016)</a></li>
-            <li><a href="https://drive.google.com/open?id=1at9YmGaxKskULeRCvqFpyYKz2Q-RKa1_" target="_blank">"#ИДИСНАМИ"(2016)</a></li>
-            <li><a href="https://drive.google.com/open?id=1hCX_QhJiw3Ysbv0atRIKKK124xDF6xZc" target="_blank">"Зачем Нам Звезды"(2017)</a></li>
-            <li><a href="https://drive.google.com/open?id=1vnZyN69mJrsEOguYSg66-XI0XWtpuK3h" target="_blank">"Зачем Нам Звезды II"(2018)</a></li>
+            <li style="margin-top: 10px;"><a href="https://drive.google.com/open?id=19oNR42PZhZaJJ1ocHxSBraxml0eO6C1j" target="_blank" class="time_color">"Бесконечный Шум"(2013)</a></li>
+            <li><a href="https://drive.google.com/open?id=1SQ_T-v_TwYN5rsXOTxfhJSOQ5_xJCzZw" target="_blank" class="time_color">"Самовыдуманный Рай"(2014)</a></li>
+            <li><a href="https://drive.google.com/open?id=1nRfclx6d8jw1L0MLzyyOqX0hJM2OZNr0" target="_blank" class="time_color">"KDKin"(2015)</a></li>
+            <li><a href="https://drive.google.com/open?id=1zJTpZdEd60zrymQsEW_ggAe7Xm4_uTDl" target="_blank" class="time_color">"18+"(2016)</a></li>
+            <li><a href="https://drive.google.com/open?id=1at9YmGaxKskULeRCvqFpyYKz2Q-RKa1_" target="_blank" class="time_color">"#ИДИСНАМИ"(2016)</a></li>
+            <li><a href="https://drive.google.com/open?id=1hCX_QhJiw3Ysbv0atRIKKK124xDF6xZc" target="_blank" class="time_color">"Зачем Нам Звезды"(2017)</a></li>
+            <li><a href="https://drive.google.com/open?id=1vnZyN69mJrsEOguYSg66-XI0XWtpuK3h" target="_blank" class="time_color">"Зачем Нам Звезды II"(2018)</a></li>
         </ul>
         </li>
         <li class="item_1" style="display: inline;"><a href="http://kdkfm.ru" target="_blank"><span class="time_color">Афіша</span></a></li>

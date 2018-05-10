@@ -179,6 +179,18 @@ label, a{ /*при наведении на стрелки или переклю�
     
 }
 
+#menu a:hover{
+    padding-bottom: 10.8px;
+    border-bottom: 1.6px solid darkorange;
+}
+
+/*
+.item_1:hover {
+    padding-bottom: 10.5px;
+    border-bottom: 1.5px solid darkorange;
+}
+*/
+
 .hr li {
     margin-right: 20px;
     text-align: left;
@@ -206,11 +218,6 @@ a {
 
 .item {
     border-top: 4px solid red;
-}
-
-.item_1:hover {
-    padding-bottom: 10.5px;
-    border-bottom: 1.5px solid darkorange;
 } 
 
 /*memu_vypad*/
@@ -494,4 +501,17 @@ footer {
 .pid_zogolovok {
     margin-left: 5px;
     color: brown;
+}
+
+.scrollup{
+    z-index: 100000;
+    width:40px;
+    height:40px;
+    opacity:0.9;
+    position:fixed;
+    bottom:50px;
+    right:100px;
+    display:none;
+    text-indent:-9999px;
+    background: url('icon_top.png') no-repeat;
 }
