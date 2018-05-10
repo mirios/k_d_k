@@ -179,17 +179,10 @@ label, a{ /*при наведении на стрелки или переклю�
     
 }
 
-#menu a:hover{
-    padding-bottom: 10.8px;
+.item_1:hover {
+    padding-bottom: 10.87px;
     border-bottom: 1.6px solid darkorange;
 }
-
-/*
-.item_1:hover {
-    padding-bottom: 10.5px;
-    border-bottom: 1.5px solid darkorange;
-}
-*/
 
 .hr li {
     margin-right: 20px;
@@ -283,16 +276,6 @@ a {
     color: darkorange;
 }
 
-/*
-#item_2:hover #vypad {
-    display: block;
-    position: absolute;
-    float: inherit;
-    text-decoration: none;
-    animation-timing-function: cubic-bezier(0,0,1,1);
-}
-*/
-
 footer {
     background-color: black;
     position: relative;
@@ -301,6 +284,7 @@ footer {
 	padding:30px 10px;
 	border-top:1.25px solid #355100;
     z-index: 10;
+    top: 100%;
 }
 
 .copyright {
