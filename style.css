@@ -180,7 +180,7 @@ label, a{ /*при наведении на стрелки или переклю�
 }
 
 .item_1:hover {
-    padding-bottom: 10.87px;
+    padding-bottom: 11px;
     border-bottom: 1.6px solid darkorange;
 }
 
@@ -369,11 +369,6 @@ footer {
 	transform: rotate(-360deg);
 }
 
-.kavabanga_pidpus {
-    margin-left: -155px;
-    font-family: Comic Sans MS, cursive;
-}
-
 .depo {
     width: 75px;
     height: 75px;
@@ -399,11 +394,6 @@ footer {
 	-o-transform: rotate(-360deg);
 	-ms-transform: rotate(-360deg);
 	transform: rotate(-360deg);
-}
-
-.depo_pidpus {
-    margin-top: -203px;
-    font-family: Comic Sans MS, cursive;
 }
 
 .kolibri {
@@ -432,13 +422,6 @@ footer {
 	-ms-transform: rotate(-350deg);
 	transform: rotate(-350deg);
 }
-
-.kolibri_pidpus {
-    margin-right: -157px; 
-    margin-top: -90px;
-    font-family: Comic Sans MS, cursive;
-}
-
 
 .foto_canal {
     width: 100%;
@@ -488,7 +471,7 @@ footer {
 }
 
 .scrollup{
-    z-index: 100000;
+    z-index: 100000000;
     width:40px;
     height:40px;
     opacity:0.9;
