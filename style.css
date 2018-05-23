@@ -211,6 +211,7 @@ a {
 
 .item {
     border-top: 4px solid red;
+    padding-top: 1px;
 } 
 
 /*memu_vypad*/
